@@ -23,9 +23,10 @@
               "src/assets"
             ],
             "styles": [
-              "src/styles.css"
+              "src/styles.css",
+              "node_modules/bootstrap/dist/css/bootstrap.css"
             ],
-            "scripts": []
+            "scripts": ["node_modules/bootstrap/dist/js/bootstrap.js"]
           },
           "configurations": {
             "production": {
@@ -90,12 +91,9 @@
               "src/assets"
             ],
             "styles": [
-              "src/styles.css",
-              "ProyectoIntegrador_LeonelArias/node_modules/bootstrap/dist/css/bootstrap.css"
+              "src/styles.css"
             ],
-            "scripts": [
-              "ProyectoIntegrador_LeonelArias/node_modules/bootstrap/dist/js/bootstrap.js"
-            ]
+            "scripts": []
           }
         }
       }
