@@ -16,6 +16,9 @@
         width: 15%;
         border-radius: 100%;
         box-shadow: 3px 3px 3px gray;
+        box-shadow: 10px 10px 10px green;
+        box-shadow: ejeX ejeY difumasion color;
+        top: 630px;
     }
 }
 @media (max-width: 575px){
@@ -23,7 +26,8 @@
         position: absolute;
         width: 30%;
         border-radius: 100%;
-        box-shadow: 3px 3px 3px gray;
+        box-shadow: 10px 10px 10px green;
+        box-shadow: ejeX ejeY difumasion color;
         left: 68%;
         top: 680px;
     }
