@@ -17,4 +17,6 @@ public interface IPersonaService {
     
     //Buscr una persona por ID
     public Persona finPersona(Long id);
+
+    public Persona findPersona(long l);
 }
