@@ -28,14 +28,18 @@ public class ImpPersonaService implements IPersonaService{
         ipersonaRepository.deleteById(id);
     }
 
-    @Override
-    public Persona finPersona(Long id) {
+    public Persona findPersona(Long id) {
         Persona persona = ipersonaRepository.findById(id).orElse(null);
         return persona;
     }
 
     @Override
     public Persona findPersona(long l) {
+        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+    }
+
+    @Override
+    public Persona finPersona(Long id) {
         throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
     }
     
