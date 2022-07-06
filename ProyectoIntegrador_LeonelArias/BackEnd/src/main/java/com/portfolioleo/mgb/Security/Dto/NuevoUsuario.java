@@ -10,7 +10,7 @@ import java.util.Set;
  */
 public class NuevoUsuario {
     private String nombre;
-    private String nombeUsuario;
+    private String nombreUsuario;
     private String email;
     private String password;
     private Set<String> roles = new HashSet<>();
@@ -23,12 +23,12 @@ public class NuevoUsuario {
         this.nombre = nombre;
     }
 
-    public String getNombeUsuario() {
-        return nombeUsuario;
+    public String getNombreUsuario() {
+        return nombreUsuario;
     }
 
-    public void setNombeUsuario(String nombeUsuario) {
-        this.nombeUsuario = nombeUsuario;
+    public void setNombreUsuario(String nombreUsuario) {
+        this.nombreUsuario = nombreUsuario;
     }
 
     public String getEmail() {
@@ -54,10 +54,4 @@ public class NuevoUsuario {
     public void setRoles(Set<String> roles) {
         this.roles = roles;
     }
-
-    public String getNombreUsuario() {
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
-    }
-    
-    
 }
