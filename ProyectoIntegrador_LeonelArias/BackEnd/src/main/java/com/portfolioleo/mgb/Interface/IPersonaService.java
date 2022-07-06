@@ -19,4 +19,6 @@ public interface IPersonaService {
     public Persona finPersona(Long id);
 
     public Persona findPersona(long l);
+
+    public Persona addPersona(Persona persona);
 }
