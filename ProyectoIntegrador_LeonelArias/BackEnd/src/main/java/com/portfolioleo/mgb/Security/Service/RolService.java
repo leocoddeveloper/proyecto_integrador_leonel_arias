@@ -1,6 +1,5 @@
 
 package com.portfolioleo.mgb.Security.Service;
-
 import com.portfolioleo.mgb.Security.Entity.Rol;
 import com.portfolioleo.mgb.Security.Enums.RolNombre;
 import com.portfolioleo.mgb.Security.Repository.iRolRepository;

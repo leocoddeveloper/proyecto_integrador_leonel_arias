@@ -1,6 +1,5 @@
 
 package com.portfolioleo.mgb.Interface;
-
 import com.portfolioleo.mgb.entity.Persona;
 import java.util.List;
 

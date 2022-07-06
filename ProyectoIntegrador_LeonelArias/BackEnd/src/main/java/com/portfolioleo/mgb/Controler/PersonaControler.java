@@ -5,9 +5,6 @@ import com.portfolioleo.mgb.Interface.IPersonaService;
 import com.portfolioleo.mgb.entity.Persona;
 import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.http.HttpStatus;
-import org.springframework.http.ResponseEntity;
-import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -15,11 +12,14 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
 @CrossOrigin(origins = "http://localhost:4200")
+@RequestMapping("/persona")
+
 public class PersonaControler {
     @Autowired IPersonaService ipersonaService;
     
@@ -58,12 +58,5 @@ public class PersonaControler {
     @GetMapping("/personas/traer/perfil")
     public Persona findPersona(){
         return ipersonaService.findPersona((long)1);
-    }
-    
-    @PreAuthorize("hasRole('ADMIN')")
-    @PostMapping("/add")
-    public ResponseEntity<Persona> addPersona(@RequestBody Persona persona) {
-        Persona newPersona = ipersonaService.addPersona(persona);
-        return new ResponseEntity<>(newPersona, HttpStatus.CREATED);
-    }
+    } 
 }

@@ -8,19 +8,20 @@ import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+
 @Service
 public class ImpPersonaService implements IPersonaService{
     @Autowired IPersonaRepository ipersonaRepository;
     
     @Override
     public List<Persona> getPersona() {
-          List<Persona> persona = ipersonaRepository.findAll();
-          return persona;
+        List<Persona> persona = ipersonaRepository.findAll();
+        return persona;
     }
 
     @Override
     public void savePersona(Persona persona) {
-          ipersonaRepository.save(persona);       
+        ipersonaRepository.save(persona);
     }
 
     @Override
@@ -34,12 +35,12 @@ public class ImpPersonaService implements IPersonaService{
     }
 
     @Override
-    public Persona findPersona(long l) {
+    public Persona finPersona(Long id) {
         throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
     }
 
     @Override
-    public Persona finPersona(Long id) {
+    public Persona findPersona(long l) {
         throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
     }
 
