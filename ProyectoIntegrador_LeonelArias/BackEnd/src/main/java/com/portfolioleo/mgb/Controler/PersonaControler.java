@@ -46,7 +46,7 @@ public class PersonaControler {
             @RequestParam("nombre") String nuevoNombre,
              @RequestParam("apellido") String nuevoApellido,
               @RequestParam("img") String nuevoImg){
-        Persona persona = ipersonaService.finPersona(id);
+        Persona persona = ipersonaService.findPersona(id);
         
         persona.setNombre(nuevoNombre);
         persona.setApellido(nuevoApellido);
