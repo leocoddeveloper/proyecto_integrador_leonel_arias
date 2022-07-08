@@ -8,7 +8,7 @@ import { persona } from '../model/persona.model';
   providedIn: 'root'
 })
 export class PersonaService {
-  apiURL = ' http://localhost:8080/personas/traer'; 
+  apiURL = ' http://localhost:8080/persona/traer'; 
   constructor(private http: HttpClient) { }
 
   public getPersona(): Observable<any>{
