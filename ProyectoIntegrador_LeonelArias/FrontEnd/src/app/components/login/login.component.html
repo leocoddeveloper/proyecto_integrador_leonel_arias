@@ -20,7 +20,7 @@
 
                   <h5 class="fw-normal mb-3 pb-3" style="letter-spacing: 1px;">Sign into your account</h5>
 
-                  <form #f="ngForm"(ngSummit)= "onLogin()" novalidate>
+                  <form #f="ngForm"(ngSubmit)= "onLogin()" novalidate>
 
                     <div class="form-outline mb-4">
                       <input type="email" id="nombreUsuario" name="nombreUsuario" class="form-control form-control-lg" [(ngModel)]="nombreUsuario" name="nombreUsuario" required />
