@@ -1,5 +1,5 @@
 .row{
-    padding: 20px;
+    padding: 50px;
     background: black;
     color: #fff;
 }
@@ -12,6 +12,6 @@
 }
 
 .img-proyecto{
-    box-shadow: 10px 10px 30px green;
+    box-shadow: 10px 10px 10px green;
     box-shadow: ejeX ejeY difumasion color;
 }
