@@ -1,14 +1,22 @@
 <div class="row">
-  <h1>Experiencia laboral </h1>
-  <div class="col-lg-1"></div>
-  <div class="col-lg-11">
-   <ul>
-    <li>
-        <h4>Sin experiencia previa</h4> 
-    </li>
-    <p>
-        Si bien es verdad que soy joven en proceso de capacitacion y con menos experiencia que otros candidatos, mi capacidad de aprendizaje y decisión me convierten en el candidato ideal para aquellas empresas que deseen crear un equipo joven, innovador y exigente.
-    </p>
-   </ul>
+  <h1>Experiencia laboral</h1>
+  <div class="col-lg-2">
+    <button type="button" class="btn btn-outline-light" routerLink="/nuevaexp" *ngIf="isLogged">
+      + Nueva Experiencia
+    </button>
   </div>
+
+  <div class="col lg 1"></div>
+  <div class="col-lg-11">
+  <table class="table">
+     <tbody>
+      <tr *ngFor="let Experiencia of expe">
+        <td>{{Experiencia.nombreE}}</td>
+        <td>{{Experiencia.descripcionE}}</td>
+        <td><i class="bi bi-pencil-square"></i> EDITAR</td>
+        <td><i class="bi bi-trash"></i> BORRAR</td>
+      </tr>
+     </tbody>
+  </table>
+
 </div>
