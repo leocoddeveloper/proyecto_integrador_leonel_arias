@@ -17,7 +17,7 @@ public class Educacion{
     public Educacion() {
     }
 
-    public Educacion(String nombrE, String descripcionE) {
+    public Educacion(String nombreE, String descripcionE) {
         this.nombreE = nombreE;
         this.descripcionE = descripcionE;
     }
@@ -30,11 +30,11 @@ public class Educacion{
         this.id = id;
     }
 
-    public String getNombrE() {
+    public String getNombreE() {
         return nombreE;
     }
 
-    public void setNombrE(String nombrE) {
+    public void setNombreE(String nombrE) {
         this.nombreE = nombreE;
     }
 
