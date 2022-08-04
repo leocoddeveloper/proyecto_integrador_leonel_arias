@@ -1,23 +1,26 @@
 <div class="row">
     <h1>Educación</h1>
-    <div class="col-lg-1"></div>
-    <div class="col-lg-11">
-     <ul>
-      <li>
-          <h4>Tecnica 6 ing.Luis Bernardo LaPorte</h4> - <h3>(2015-2021)</h3>
-      </li>
-      <p>
-          Lugar donde me recibí como tecnico informatico profesional, adquiriendo varios conocimientos sobre la programación. Entre otras cosas como por ejemplo el mantenimiento de PCs tanto por el lado del software y hardware.
-      </p>
-     </ul>
-     <ul>
-      <li>
-          <h4>Argentina Programa</h4> - <h3>(2022-2023)</h3>
-      </li>
-      <p>
-        Una capacitación de programación gratuita y virtual organizada en dos etapas: #SéProgramar, en donde vas a aprender los fundamentos básicos para aprender a programar y
-         #YoProgramo, en la que vas a profundizar tus conocimientos y capacitarte para convertirte en un programador web full stack junior.
-      </p>
-     </ul>
+    <div class="col-lg-2">
+      <button type="button" class="btn btn-outline-light" routerLink="/nuevaedu" *ngIf="isLogged">
+        + Agregar Educación
+      </button>
     </div>
-  </div>
+  
+    <div class="col lg 1"></div>
+    <div class="col-lg-11">
+      <table class="table">
+        <tbody>
+          <tr *ngFor="let Educacion of educacion">
+            <td>{{Educacion.nombreE}}</td>
+            <td>{{Educacion.descripcionE}}</td>
+            <td *ngIf="isLogged"><button class="btn btn-outline-light" routerLink="/editexp/{{Educacion.id}}">
+                <i class="bi bi-pencil-square"></i> EDITAR</button>
+            </td>
+            <td *ngIf="isLogged"><button class="btn btn-outline-danger" (click)="delete(Educacion.id)">
+                <i class="bi bi-trash"></i> BORRAR </button>
+              </td>
+          </tr>
+        </tbody>
+      </table>
+  
+    </div>
