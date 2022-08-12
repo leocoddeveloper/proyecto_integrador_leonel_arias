@@ -41,6 +41,7 @@ public class CEducacion {
         Educacion educacion = sEducacion.getOne(id).get();
         return new ResponseEntity(educacion, HttpStatus.OK);
     }
+    
     @DeleteMapping("/delete/{id}")
     public ResponseEntity<?> delete(@PathVariable("id") int id){
         if(!sEducacion.existsById(id)){
@@ -60,10 +61,11 @@ public class CEducacion {
         }
         
         Educacion educacion = new Educacion(
-           dtoeducacion.getNombreE(), dtoeducacion.getDescripcionE()
-        );
+                dtoeducacion.getNombreE(), dtoeducacion.getDescripcionE()
+            );
         sEducacion.save(educacion);
         return new ResponseEntity(new Mensaje("Educacion creada"), HttpStatus.OK);
+                
     }
     
     @PutMapping("/update/{id}")
@@ -80,7 +82,7 @@ public class CEducacion {
         
         Educacion educacion = sEducacion.getOne(id).get();
         
-        educacion.setNombrE(dtoeducacion.getNombreE());
+        educacion.setNombreE(dtoeducacion.getNombreE());
         educacion.setDescripcionE(dtoeducacion.getDescripcionE());
         
         sEducacion.save(educacion);

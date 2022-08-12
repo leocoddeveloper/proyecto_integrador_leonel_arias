@@ -7,7 +7,7 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 
 @Entity
-public class Educacion{
+public class Educacion {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
@@ -34,7 +34,7 @@ public class Educacion{
         return nombreE;
     }
 
-    public void setNombreE(String nombrE) {
+    public void setNombreE(String nombreE) {
         this.nombreE = nombreE;
     }
 
